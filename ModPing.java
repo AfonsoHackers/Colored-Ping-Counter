@@ -2,7 +2,6 @@ package client.mods;
 
 import java.awt.Color;
 import net.minecraft.client.gui.Gui;
-import client.gui.UnicodeFontRenderer;
 import client.gui.hud.ScreenPosition;
 import client.mods.ModDraggable;
 
@@ -35,22 +34,22 @@ public class ModPing extends ModDraggable {
 	public void render(ScreenPosition pos) {
 		int ping = mc.getMinecraft().getNetHandler().getPlayerInfo(mc.getMinecraft().thePlayer.getUniqueID()).getResponseTime();
 		if(ping <= 10) {
-			font.drawStringWithShadow("งb  " + ping + " ms", pos.getAbsoluteX() + getWidth2() + 3, pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยงb  " + ping + " ms", pos.getAbsoluteX() + getWidth2() + 3, pos.getAbsoluteY() + 4, -1);
 			return;
 		} else if (ping <= 50) {
-			font.drawStringWithShadow("งa  " + ping + " ms", pos.getAbsoluteX() + getWidth2(), pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยงa  " + ping + " ms", pos.getAbsoluteX() + getWidth2(), pos.getAbsoluteY() + 4, -1);
 			return;
 		} else if (ping <= 100) {
-			font.drawStringWithShadow("ง2  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยง2  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
 			return;
 		} else if (ping <= 150) {
-			font.drawStringWithShadow("งe  " + ping + " ms" , pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยงe  " + ping + " ms" , pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
 			return;
 		} else if (ping <= 180) {
-			font.drawStringWithShadow("งc  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยงc  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
 			return;
 		} else {
-			font.drawStringWithShadow("ง4  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
+			font.drawStringWithShadow("ยง4  " + ping + " ms", pos.getAbsoluteX() + getWidth2() - 3, pos.getAbsoluteY() + 4, -1);
 			return;
 		}
 		
